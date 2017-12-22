@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/AndyLPK247/jasmine-node-js-example/issues"
   },
-  "homepage": "https://github.com/AndyLPK247/jasmine-node-js-example"
+  "homepage": "https://github.com/AndyLPK247/jasmine-node-js-example",
+  "dependencies": {
+    "jasmine": "^2.8.0"
+  }
 }
