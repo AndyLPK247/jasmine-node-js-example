@@ -30,4 +30,9 @@ describe("Calculator Functions", function() {
     expect(value).toEqual(1.5);
   });
 
+  it("should throw an exception when dividing by zero", function() {
+    let divideByZero = function() { calculator.divide(NUM_A, 0); };
+    expect(divideByZero).toThrowError(RangeError, 'Divide-by-zero');
+  });
+
 });
