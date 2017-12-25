@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/AndyLPK247/jasmine-node-js-example",
   "dependencies": {
+    "frisby": "^2.0.10",
     "jasmine": "^2.8.0"
   }
 }
