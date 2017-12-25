@@ -19,7 +19,8 @@ describe("English Wikipedia REST API", function() {
 
   // Setup
 
-  const BASE_URL = "https://en.wikipedia.org/api/rest_v1";
+  const ENV = require("../support/env.json");
+  const BASE_URL = ENV.integration.wikipediaServiceBaseUrl;
 
 
   // /page/
