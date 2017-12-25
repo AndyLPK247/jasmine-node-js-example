@@ -24,13 +24,11 @@ describe("English Wikipedia REST API", function() {
 
   // /page/
 
-  const R_PAGE = "/page/";
-
-  describe(R_PAGE, function() {
+  describe("GET /page/", function() {
 
     it("should return a list of page-related API endpoints", function(done) {
       frisby
-        .get(BASE_URL + R_PAGE)
+        .get(BASE_URL + "/page/")
         .then(function(response) {
           expect(response.status).toBe(200);
           expect(response.json.items).toContain("html");
@@ -41,6 +39,43 @@ describe("English Wikipedia REST API", function() {
         })
         .done(done);
     });
+
+  });
+
+
+  // /page/html/{title}
+
+  describe("GET /page/html/{title}", function() {
+
+    it("should return the latest HTML for the given page title", function(done) {
+      frisby
+        .get(BASE_URL + "/page/html/Pikachu")
+        .then(function(response) {
+          expect(response.status).toBe(200);
+          expect(response.body).toContain("<title>Pikachu</title>");
+          // To be more robust, this test could parse the body into HTML
+        })
+        .done(done);
+    })
+
+  });
+
+
+  // /page/summary/{title}
+
+  describe("GET /page/summary/{title}", function() {
+
+    it("should return the summary for the given page title", function(done) {
+      frisby
+        .get(BASE_URL + "/page/summary/Pikachu")
+        .then(function(response) {
+          expect(response.status).toBe(200);
+          expect(response.json.title).toBe("Pikachu");
+          expect(response.json.pageid).toBe(269816);
+          expect(response.json.extract).toContain("Pokémon");
+        })
+        .done(done);
+    })
 
   });
 
