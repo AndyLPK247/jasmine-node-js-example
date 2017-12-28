@@ -4,7 +4,7 @@
   "description": "An example project for Jasmine tests running on Node.js and written in JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jasmine"
   },
   "repository": {
     "type": "git",
