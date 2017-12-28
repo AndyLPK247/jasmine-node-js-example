@@ -14,3 +14,4 @@ Helpful links:
 * https://joost.vunderink.net/blog/2016/03/27/sinon-vs-rewire-when-do-i-use-which/
 * http://sinonjs.org/
 * https://github.com/jhnns/rewire
+* https://www.npmjs.com/package/jasmine-xml-reporter
