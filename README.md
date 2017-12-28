@@ -15,3 +15,4 @@ Helpful links:
 * http://sinonjs.org/
 * https://github.com/jhnns/rewire
 * https://www.npmjs.com/package/jasmine-xml-reporter
+* https://www.npmjs.com/package/karma-jasmine-spec-tags
